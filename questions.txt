@@ -1,8 +1,5 @@
-howto:
- - box shadow for popup-menu
- - overflow-x: hidden @ submenu because of shadow (multiple shadows don't seem to be possible)
- - ...
-
+Theme:
+ - Box shadow is real shadow and only possible with border or background!
 
 TeaTime:
 // TODO: get colors from current theme!

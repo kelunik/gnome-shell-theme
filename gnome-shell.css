@@ -138,16 +138,16 @@ StScrollBar StButton#vhandle:active {
 .popup-menu-ornament {
     text-align: right;
     width: 1em;
-    box-shadow: 0 0 8px black;
 }
 
 .popup-menu-boxpointer,
 .candidate-popup-boxpointer {
-    -arrow-border-radius: 3px;
+    -arrow-border-radius: 2px;
     -arrow-background-color: rgba(255,255,255,0.95);
-    -arrow-border-width: 0;
-    -arrow-base: 12px;
-    -arrow-rise: 6px;
+    -arrow-border-width: 1px;
+    -arrow-border-color: rgba(0,0,0,0.05);
+    -arrow-base: 16px !important;
+    -arrow-rise: 8px !important;
 }
 
 .popup-menu {
@@ -155,28 +155,33 @@ StScrollBar StButton#vhandle:active {
     color: #333;
 }
 
+.popup-menu-content {
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.95); /* without background no shadow */
+}
+
 .unicode-arrow {
     font-size: 120%;
 }
 
 .popup-submenu-menu-item:open {
-    /* important to override :active state */
-    background-color: rgba(255,255,255,0.9) !important;
-    box-shadow: 0 0 3px rgba(0,0,0,0.2) !important;
+    background: #f7f7f7;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,0.1);
 }
 
 .popup-sub-menu {
-    background: rgba(0,0,0,0.025);
+    background: rgba(0,0,0,0.05);
     background-gradient-direction: none;
-    box-shadow: 0 -3px 3px -3px rgba(0,0,0,0.1) inset;
+    box-shadow: 0 -3px 3px -3px rgba(0,0,0,0.2) inset;
     color: #444;
 }
 
 .popup-sub-menu .popup-menu-item:active {
     color: #000;
+    background-color: rgba(0,0,0,0.05);
 }
 
-.popup-sub-menu:scrolled .popup-menu-item:ltr {
+.popup-sub-menu:scrolled .popup-menu-item {
     padding-right: 0em;
 }
 
@@ -193,16 +198,12 @@ StScrollBar StButton#vhandle:active {
     color: #444;
 }
 
-.popup-menu-item:ltr {
+.popup-menu-item {
     padding: .4em 1.75em .4em 0em;
 }
 
-.popup-menu-item:rtl {
-    padding: .4em 0em .4em 1.75em;
-}
-
 .popup-menu-item:active {
-    background: transparent;
+    background: #f4f4f4;
     color: #000;
 }
 
@@ -555,6 +556,7 @@ StEntry,
 
 .panel-button:hover {
     color: #fff;
+    background-color: rgba(0,0,0,0.075);
 }
 
 .panel-button:active,
