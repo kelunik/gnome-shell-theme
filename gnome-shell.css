@@ -1699,6 +1699,12 @@ StEntry:focus {
 }
 /* Password or Authentication Dialog */
 
+/* FIXME: Find out right selector and use it! */
+/* TODO: Add margin to username on the right */
+.prompt-dialog-main-layout StBin {
+    border: none !important;
+}
+
 .prompt-dialog {
   /* this is the width of the entire modal popup */
   width: 500px;
@@ -1721,7 +1727,7 @@ StEntry:focus {
 }
 .prompt-dialog-error-label {
   font-size: 10pt;
-  color: #ffff00;
+  color: #d00;
   padding-bottom: 8px;
 }
 .prompt-dialog-info-label {
