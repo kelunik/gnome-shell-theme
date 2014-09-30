@@ -128,7 +128,7 @@ StScrollBar StButton#vhandle:active {
 }
 .popup-menu-boxpointer,
 .candidate-popup-boxpointer {
-  -arrow-border-radius: 6px; /* actually, this is the spacing */
+  -arrow-border-radius: 2px; /* actually, this is spacing and box border-radius :( */
   -arrow-background-color: rgba(255, 255, 255, 0.95);
   -arrow-border-width: 1px;
   -arrow-border-color: rgba(0, 0, 0, 0.05);
@@ -141,8 +141,8 @@ StScrollBar StButton#vhandle:active {
 }
 .popup-menu-content {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-  background: rgba(255, 255, 255, 0.95);
   /* without background no shadow */
+  background: rgba(255, 255, 255, 0.95);
 }
 .unicode-arrow {
   font-size: 120%;
@@ -444,7 +444,6 @@ StEntry:focus {
 .panel-button:checked #appMenuIcon,
 .panel-button:focus #appMenuIcon {
   app-icon-bottom-clip: 1px;
-  /* FIXME: Icon ist über dem Border-Bottom, kann aber nicht 3px betragen, da Border-Bottom nicht über ganze Breite im Moment */
 }
 .app-menu-icon {
   width: 24px;
@@ -606,14 +605,6 @@ StEntry:focus {
   -shell-close-overlap-x: 14px;
   -shell-close-overlap-y: -12px;
 }
-.notification-close:rtl {
-  /* as above, but starting out in the top left of the
-     * notification. */
-  -shell-close-overlap-x: -14px;
-}
-.window-close:rtl {
-  -st-background-image-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-}
 .window-picker {
   -horizontal-spacing: 32px;
   -vertical-spacing: 32px;
@@ -667,21 +658,18 @@ StEntry:focus {
 #searchEntry {
   width: 320px;
   border: 0;
+  /* FIXME: Doesn't work */
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  /* FIXME: Doesn't work */
   box-shadow: none;
-  background-color: transparent;
   /* FIXME: Doesn't work */
+  background-color: transparent;
   background-image: none;
   color: #fff;
   caret-color: #fff;
   selected-color: #fff;
 }
 #searchEntry:focus,
-#searchEntry:hover
-/* FIXME: Doesn't work */
-
-{
+#searchEntry:hover /* FIXME: Doesn't work */ {
   border-color: rgba(255, 255, 255, 0.5);
 }
 .search-entry-icon {
@@ -899,7 +887,6 @@ StEntry:focus {
   text-shadow: 0;
 }
 /* Fixes Bug from v1.0 */
-
 .list-search-result:selected .list-search-result-title {
   color: #333;
 }
@@ -1225,7 +1212,7 @@ StEntry:focus {
   min-height: 159px;
 }
 .summary-boxpointer {
-  -arrow-border-radius: 6px; /* actually, this is the spacing */
+  -arrow-border-radius: 2px; /* actually, this is spacing and box border-radius :( */
   -arrow-background-color: rgba(255, 255, 255, 0.95);
   -arrow-border-width: 1px;
   -arrow-border-color: rgba(0, 0, 0, 0.05);
