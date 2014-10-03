@@ -17,6 +17,8 @@
  * Inc., 51 Franklin St - Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
+@import "mediaplayer-indicator.css";
+
 /* FIXME: Super + Tab Window Title needs to be #333 instead of white */
 
 /* Text Styles */
@@ -288,7 +290,7 @@ StScrollBar StButton#vhandle:active {
 .modal-dialog-button,
 .app-view-control {
   color: #333;
-  border-radius: 2px !important;
+  border-radius: 2px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-gradient-direction: vertical;
   background-gradient-start: #eee;
@@ -742,9 +744,11 @@ StEntry:focus {
 }
 .app-view-control {
   padding: 4px 32px;
+  background: rgba(255,255,255,0.6);
 }
 .app-view-control:focus {
   padding: 3px 31px;
+  background: rgba(255,255,255,1.0);
 }
 .search-display > StBoxLayout,
 .all-apps,
